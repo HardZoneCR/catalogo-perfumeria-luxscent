@@ -1,0 +1,122 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #0b0c10; /* Negro profundo del fondo del logo */
+    color: #c5c6c7; /* Gris claro/plata para que el texto sea legible */
+}
+
+/* --- ENCABEZADO (HEADER) --- */
+header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(180deg, #000000, #0b0c10); /* Degradado negro */
+    border-bottom: 2px solid #0056b3; /* Línea delgada azul brillante */
+}
+
+header h1 {
+    color: #00d2ff; /* Azul brillante degradado simulado */
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.3); /* Destello sutil azul */
+}
+
+header p {
+    color: #85929E; /* Gris plata secundario */
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* --- SECCIONES DE MARCAS --- */
+.marca-seccion {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.titulo-marca {
+    font-size: 1.8rem;
+    color: #00d2ff; /* Azul del logo */
+    border-bottom: 1px solid #1f2833; /* Separador oscuro elegante */
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- CONTENEDOR DEL CATÁLOGO --- */
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 2rem 0;
+}
+
+/* --- TARJETA DE PRODUCTO --- */
+.producto {
+    background: #1f2833; /* Gris oscuro metálico para las tarjetas */
+    border: 1px solid #2c3540;
+    border-radius: 12px;
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima de un perfume */
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.15); /* Brillo azul */
+    border-color: #00d2ff;
+}
+
+.producto img {
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+.producto h3 {
+    color: #ffffff; /* Nombre del perfume en blanco puro */
+    font-size: 1.3rem;
+    margin: 15px 0 8px 0;
+}
+
+.descripcion {
+    color: #a6b1e1; /* Color suave para la descripción */
+    font-size: 0.9rem;
+    line-height: 1.4;
+    min-height: 50px; /* Mantiene las tarjetas alineadas */
+}
+
+.precio {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #00d2ff; /* El precio resalta en el azul de LuxScent */
+    margin: 15px 0;
+}
+
+/* --- BOTÓN DE WHATSAPP --- */
+.btn-comprar {
+    display: block;
+    background: linear-gradient(135deg, #0056b3, #00d2ff); /* Degradado azul del logo */
+    color: #ffffff;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-comprar:hover {
+    filter: brightness(1.2); /* Se ilumina un poco al pasar el mouse */
+    transform: scale(1.02);
+}
