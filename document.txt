@@ -1,0 +1,13 @@
+Ahora cada vez que hagas cambios en tu proyecto, solo debes usar:
+
+Shell
+git add .
+git commit -m "Descripción del cambio"
+git push
+
+Por ejemplo:
+
+Shell
+git add .
+git commit -m "Agregué nuevos perfumes"
+git push

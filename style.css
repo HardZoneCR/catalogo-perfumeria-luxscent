@@ -120,3 +120,104 @@ header p {
     filter: brightness(1.2); /* Se ilumina un poco al pasar el mouse */
     transform: scale(1.02);
 }
+
+
+/* ==========================================================================
+   LO QUE AGREGAMOS: SOPORTE PARA EL LOGO ARRIBA A LA IZQUIERDA Y MÓVILES
+   ========================================================================== */
+
+/* Ajuste de alineación para que el logo se ordene de forma bonita en PC */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem !important; /* Forza el uso de espacio para el Navbar */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.4));
+}
+
+.logo-texto {
+    color: #00d2ff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.lema-texto {
+    color: #85929E;
+    font-size: 0.9rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Reglas Media Query para que se adapte automáticamente al Celular */
+@media (max-width: 768px) {
+    .barra-navegacion {
+        flex-direction: column;
+        padding: 1rem !important;
+        gap: 10px;
+    }
+    
+    .logo-texto {
+        font-size: 1.5rem;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+
+    .catalogo {
+        padding: 1rem 0.5rem;
+        gap: 15px;
+    }
+
+    .producto {
+        width: 45%; /* Acomoda 2 perfumes por fila en teléfonos modernos */
+        min-width: 160px;
+        padding: 10px;
+    }
+
+    .producto img {
+        height: 150px; /* Hace la imagen un poco más baja en celular */
+    }
+
+    .producto h3 {
+        font-size: 1rem;
+    }
+
+    .descripcion {
+        font-size: 0.8rem;
+        min-height: 60px;
+    }
+
+    .precio {
+        font-size: 1.1rem;
+    }
+
+    .btn-comprar {
+        font-size: 0.75rem;
+        padding: 10px 5px;
+    }
+}
+
+/* Para pantallas de celulares muy pequeños, muestra un perfume por fila */
+@media (max-width: 400px) {
+    .producto {
+        width: 90%;
+    }
+}
