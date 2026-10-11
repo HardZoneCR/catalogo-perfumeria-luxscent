@@ -165,6 +165,38 @@ header p {
     text-transform: uppercase;
 }
 
+/* 🔍 NUEVO: DISEÑO INTERACTIVO PARA LA LUPA DE BÚSQUEDA */
+.buscador-contenedor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+#inputBuscador {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    background-color: #1f2833; /* Color idéntico a las tarjetas */
+    border: 1px solid #2c3540;
+    border-radius: 20px; /* Bordes ovalados premium */
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#inputBuscador:focus {
+    border-color: #00d2ff; /* Resplandor azul LuxScent */
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+}
+
+.lupa-icono {
+    position: absolute;
+    right: 15px;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
 /* Reglas Media Query para que se adapte automáticamente al Celular */
 @media (max-width: 768px) {
     .barra-navegacion {
@@ -179,6 +211,13 @@ header p {
     
     .logo-img {
         height: 40px;
+    }
+
+    /* Ajuste del buscador en la versión móvil */
+    .buscador-contenedor {
+        width: 100%;
+        max-width: 320px;
+        margin: 5px 0;
     }
 
     .catalogo {

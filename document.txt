@@ -9,5 +9,5 @@ Por ejemplo:
 
 Shell
 git add .
-git commit -m "Agregué nuevas descripciones"
+git commit -m "Actualizaciones"
 git push
