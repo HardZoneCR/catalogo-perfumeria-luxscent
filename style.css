@@ -222,41 +222,47 @@ header p {
 
     .catalogo {
         padding: 1rem 0.5rem;
-        gap: 15px;
+        gap: 20px; /* Un poco más de espacio entre las tarjetas en móvil */
     }
 
+    /* 🛠️ MODIFICADO: Tarjeta mucho más grande y centrada en móviles */
     .producto {
-        width: 45%; /* Acomoda 2 perfumes por fila en teléfonos modernos */
-        min-width: 160px;
-        padding: 10px;
+        width: 90%; /* Ocupa casi todo el ancho del celular */
+        max-width: 340px; /* Evita que se deforme en pantallas medianas */
+        min-width: 260px; /* Establece una base más ancha */
+        padding: 20px; /* Mayor espacio de respiración interna */
+        margin: 10px auto; /* Centra la tarjeta perfectamente */
     }
 
+    /* 🛠️ MODIFICADO: Imagen notablemente más alta y definida */
     .producto img {
-        height: 150px; /* Hace la imagen un poco más baja en celular */
+        height: 240px; /* Aumenta el tamaño de visualización del perfume */
+        width: 100%;
+        object-fit: contain; /* Ajusta el perfume de forma estética sin cortarlo */
     }
 
     .producto h3 {
-        font-size: 1rem;
+        font-size: 1.2rem; /* Título ligeramente más grande en celular */
     }
 
     .descripcion {
-        font-size: 0.8rem;
-        min-height: 60px;
+        font-size: 0.85rem;
+        min-height: auto; /* Permite que la descripción use el espacio que necesita */
     }
 
     .precio {
-        font-size: 1.1rem;
+        font-size: 1.3rem; /* Precio más llamativo */
     }
 
     .btn-comprar {
-        font-size: 0.75rem;
-        padding: 10px 5px;
+        font-size: 0.85rem;
+        padding: 12px 10px;
     }
 }
 
-/* Para pantallas de celulares muy pequeños, muestra un perfume por fila */
+/* Para pantallas de celulares muy pequeños, se mantiene bien balanceado */
 @media (max-width: 400px) {
     .producto {
-        width: 90%;
+        width: 95%;
     }
 }
